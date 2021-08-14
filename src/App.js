@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+
+const appObj = {
+  name: "dan",
+  age: 222,
+  subtite: "the juice",
+  options: ["one", "two"],
+};
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  const templateTwo = (
+    <div>
+      <h1>thios is bla {appObj.name}</h1>
+      {appObj.subtite && <h2>{appObj.subtite}</h2>}
+      {appObj.options.length > 0 ? "we have options" : "there are no options"}
     </div>
   );
+  return <div className="App">{templateTwo}</div>;
 }
 
 export default App;
