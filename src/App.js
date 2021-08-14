@@ -15,6 +15,16 @@ function App() {
       {appObj.options.length > 0 ? "we have options" : "there are no options"}
     </div>
   );
+
+  const fullName = "fname lname";
+  if (fullName) {
+    const firstName = fullName.split(" ")[0];
+    console.log(firstName);
+  }
+
+  //outputs 'firstName' is not defined error as its called out of scope
+  console.log(firstName);
+
   return <div className="App">{templateTwo}</div>;
 }
 
