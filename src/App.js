@@ -17,6 +17,7 @@ function App() {
   );
 
   const fullName = "fname lname";
+  let firstName;
   if (fullName) {
     const firstName = fullName.split(" ")[0];
     console.log(firstName);
