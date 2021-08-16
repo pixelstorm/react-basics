@@ -8,6 +8,7 @@ const appObj = {
 };
 
 function App() {
+  const fullName = "fname lname";
   const templateTwo = (
     <div>
       <h1>thios is bla {appObj.name}</h1>
@@ -16,15 +17,18 @@ function App() {
     </div>
   );
 
-  const fullName = "fname lname";
-  let firstName;
-  if (fullName) {
-    const firstName = fullName.split(" ")[0];
-    console.log(firstName);
-  }
+  const getFirstName = (fullName) => {
+    return fullName.split(" ")[0];
+  };
+
+  console.log(getFirstName("mybane ksks"));
+
+  //const getFirstNameExp = () => console.log(firstName);
+
+  //getFirstNameExp();
 
   //outputs 'firstName' is not defined error as its called out of scope
-  console.log(firstName);
+  //console.log(firstName);
 
   return <div className="App">{templateTwo}</div>;
 }
