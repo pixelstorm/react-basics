@@ -21,12 +21,15 @@ function App() {
 
   //console.log(getFirstName("mybane ksks"));
 
-  const myFun = (val) => {
-    const numbers = [12, 33, 11, 10];
-    return numbers.map((newVal) => newVal * val);
+  const multiplier = {
+    numbers: [22, 39, 992, 2],
+    multiplyBy: 2,
+    multiply() {
+      return this.numbers.map((val) => val * this.multiplyBy);
+    },
   };
 
-  console.log(myFun(26));
+  console.log(multiplier.multiply(22));
 
   return <div className="App">{templateTwo}</div>;
 }
