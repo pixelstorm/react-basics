@@ -9,27 +9,21 @@ const appObj = {
 
 function App() {
   const fullName = "fname lname";
+  let count = 0;
+  const minusOne = () => {
+    count = count - 1;
+    console.log(count);
+  };
+  const resetCount = () => {
+    count = 0;
+    console.log(count);
+  };
   const templateTwo = (
     <div>
-      <h1>thios is bla {appObj.name}</h1>
-      {appObj.subtite && <h2>{appObj.subtite}</h2>}
-      {appObj.options.length > 0 ? "we have options" : "there are no options"}
+      <button onClick={minusOne}>minus 1</button>
+      <button onClick={resetCount}>Reset Count</button>
     </div>
   );
-
-  const getFirstName = (fullName) => fullName.split(" ")[0];
-
-  //console.log(getFirstName("mybane ksks"));
-
-  const multiplier = {
-    numbers: [22, 39, 992, 2],
-    multiplyBy: 2,
-    multiply() {
-      return this.numbers.map((val) => val * this.multiplyBy);
-    },
-  };
-
-  console.log(multiplier.multiply(22));
 
   return <div className="App">{templateTwo}</div>;
 }
