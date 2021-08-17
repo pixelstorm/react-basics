@@ -19,14 +19,14 @@ function App() {
 
   const getFirstName = (fullName) => fullName.split(" ")[0];
 
-  console.log(getFirstName("mybane ksks"));
+  //console.log(getFirstName("mybane ksks"));
 
-  //const getFirstNameExp = () => console.log(firstName);
+  const myFun = (val) => {
+    const numbers = [12, 33, 11, 10];
+    return numbers.map((newVal) => newVal * val);
+  };
 
-  //getFirstNameExp();
-
-  //outputs 'firstName' is not defined error as its called out of scope
-  //console.log(firstName);
+  console.log(myFun(26));
 
   return <div className="App">{templateTwo}</div>;
 }
