@@ -34,9 +34,9 @@ export const Form = () => {
   return (
     <div>
       <p>{getCount}</p>
-      {app.options.map((option) => {
-        return <p key={option}> Option: {option}</p>;
-      })}
+      {app.options.map((option) => (
+        <p key={option}> Option: {option}</p>
+      ))}
       <form onSubmit={onFormSubmit}>
         <input type="text" name="option" />
         <button>Add Option</button>
